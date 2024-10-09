@@ -1,0 +1,105 @@
+/* Estilos generales */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #FFA726, #FFCCBC, #3F51B5, #64B5F6, #CE93D8, #FFD700);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.nav-text {
+    margin-left: 8px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.main {
+    flex: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.functions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.function {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    max-width: 300px;
+}
+
+.function h3 {
+    margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+}
+
+.function p {
+    margin-bottom: 20px;
+}

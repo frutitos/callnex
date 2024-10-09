@@ -1,0 +1,87 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(to bottom right, #FFA726, #FFCCBC, #3F51B5, #64B5F6, #CE93D8, #FFD700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2f3036;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #2897e0;
+    color: #fff;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 20px;
+}
+
+.login-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2897e0;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

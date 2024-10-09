@@ -1,0 +1,91 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(to bottom right, #FFA726, #FFCCBC, #3F51B5, #64B5F6, #CE93D8, #FFD700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container .logo {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgb(51, 62, 73);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(24, 119, 207);
+    color: #fff;
+}
+
+p {
+    text-align: center;
+}
+
+/* Nuevas clases para los mensajes */
+.success-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}

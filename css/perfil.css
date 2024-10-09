@@ -1,0 +1,265 @@
+/* Estilos generales */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #FFA726, #FFCCBC, #3F51B5, #64B5F6, #CE93D8, #FFD700);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.nav-text {
+    margin-left: 8px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.main {
+    flex: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.functions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.function {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    max-width: 300px;
+}
+
+.function h3 {
+    margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+}
+
+.function p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background-color: rgb(24, 119, 207);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .main h2 {
+        font-size: 24px;
+    }
+
+    .function {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+/* Estilos para la página de configuración */
+.config-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.option {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.option a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option i {
+    margin-right: 8px;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la página de perfil */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.success-message {
+    background-color: #4caf50; /* Color de fondo verde */
+    color: #fff; /* Texto blanco */
+    padding: 10px 10px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Centrado de texto */
+    animation: fadeInUp 0.5s ease; /* Animación de entrada */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
