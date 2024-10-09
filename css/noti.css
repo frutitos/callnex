@@ -1,105 +1,72 @@
-/* Estilos generales */
-body {
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #FFA726, #FFCCBC, #3F51B5, #64B5F6, #CE93D8, #FFD700);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    animation: gradientAnimation 15s ease infinite;
-    background-size: 400% 400%;
+/* Estilos de notificaciones */
+.notifications {
+    display: flex; /* Flexbox para mejor alineación */
+    flex-direction: column; /* Alinear notificaciones en columna */
+    max-width: 600px; /* Ancho máximo del contenedor de notificaciones */
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px; /* Espacio interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    animation: slideIn 0.5s ease-out; /* Animación de entrada */
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Desplazado hacia arriba */
+        opacity: 0; /* Inicialmente oculto */
+    }
+    to {
+        transform: translateY(0); /* Regresa a su posición original */
+        opacity: 1; /* Totalmente visible */
+    }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Estilo de cada notificación */
+.notification {
+    background-color: #f9f9f9; /* Color de fondo de la notificación */
+    border-left: 5px solid #FFA726; /* Línea de color a la izquierda */
+    padding: 15px; /* Espacio interno */
+    margin-bottom: 10px; /* Espacio entre notificaciones */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición para efecto hover */
 }
 
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
+/* Efecto hover en notificaciones */
+.notification:hover {
+    background-color: #f1f1f1; /* Cambio de color en hover */
 }
 
-.nav-links li {
-    display: inline;
+/* Mensaje si no hay notificaciones */
+.notifications p {
+    color: #555; /* Color de texto para el mensaje de no notificaciones */
+    font-size: 18px; /* Tamaño de fuente */
+    text-align: center; /* Centrar el texto */
 }
 
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
+/* Botones de ver y borrar notificaciones */
+.btn-notificaciones, .btn-borrar {
+    background-color: #333; /* Color de fondo de los botones */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno */
+    cursor: pointer; /* Cambiar cursor al pasar */
+    transition: background-color 0.3s; /* Transición para hover */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
-.nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+/* Efecto hover en botones */
+.btn-notificaciones:hover, .btn-borrar:hover {
+    background-color: #555;; /* Cambio de color en hover */
 }
 
-.nav-text {
-    margin-left: 8px;
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.main {
-    flex: 1;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.main h2 {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.functions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.function {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    max-width: 300px;
-}
-
-.function h3 {
-    margin-top: 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-}
-
-.function p {
-    margin-bottom: 20px;
+/* Estilo para botones de notificaciones en móvil */
+@media (max-width: 600px) {
+    .notifications {
+        width: 90%; /* Ajustar ancho en móviles */
+    }
 }

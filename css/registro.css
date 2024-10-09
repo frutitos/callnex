@@ -18,15 +18,17 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 50px;
+    padding: 20px; /* Reducir el padding */
+    border-radius: 20px; /* Mantener el radio del borde */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 90%; /* Mantener el ancho responsivo */
+    max-width: 400px; /* Establecer un máximo ancho */
+    margin: 20px; /* Espacio alrededor del contenedor */
 }
 
 .logo {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
+    width: 100px; /* Ajustar el tamaño del logo */
     height: auto;
     margin-bottom: 20px;
 }

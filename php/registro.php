@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="container">
-        <img src="/callnex/imgs/callnex_logo.png" alt="CallNex Logo" class="logo">
         <h1 class="title">Registro</h1>
         
         <?php
@@ -78,7 +77,7 @@
             <button type="submit" class="register-button">Registrarse</button>
         </form>
 
-        <a href="/callnex/index.html" class="login-link">¿Ya tienes cuenta? Inicia sesión</a>
+        <a href="/callnex/index.php" class="login-link">¿Ya tienes cuenta? Inicia sesión</a>
     </div>
 </body>
 </html>

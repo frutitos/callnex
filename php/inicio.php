@@ -80,12 +80,8 @@
                         }
                         ?>
                     </select>
-
                     <button class="btn" onclick="hacerLlamado()"><i class="fas fa-phone"></i> <span class="btn-text">Llamar</span></button>
-                </div>
-
-                <div class="function">
-                    <h3>Llegada</h3>
+                    <br>
                     <button class="btn" onclick="cancelarLlamado()"><i class="fas fa-times"></i> <span class="btn-text">Llegada</span></button>
                 </div>
             </div>

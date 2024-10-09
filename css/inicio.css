@@ -95,6 +95,7 @@ nav ul li a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Contenedor de funciones */
 .functions {
     display: flex;
     justify-content: center;
@@ -102,46 +103,111 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+/* Estilo de cada función */
 .function {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
     margin: 10px;
-    max-width: 300px;
+    text-align: left;
 }
 
+.function:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo del título de la función */
 .function h3 {
-    margin-top: 0;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
+    margin-top: 0;
+    color: #333;
+    text-align: center;
 }
 
+/* Estilo de los párrafos en cada función */
 .function p {
     margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
 }
 
+/* Botón principal */
 .btn {
     display: inline-block;
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .btn i {
-    margin-right: 8px;
+    margin-right: 10px;
+    font-size: 18px;
 }
 
 .btn:hover {
     background-color: rgb(24, 119, 207);
+}
+
+.btn-text {
+    font-weight: bold;
+}
+
+/* Label para los select */
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Select de curso y división */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+select:hover, select:focus {
+    border-color: rgb(24, 119, 207);
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
 }
 
 .logo {
@@ -150,222 +216,11 @@ nav ul li a:hover {
     left: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: auto;
-}
-
 .logo img {
     width: 50px;
     height: auto;
 }
 
-.availability {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px; /* Ajusta el margen inferior según necesites */
-    margin-left: 15px; /* Espacio entre el texto "Estado" y el botón */
-    animation: fadeIn 2s ease-in-out;
-}
-
-.state-label {
-    font-size: 15px;
-    color: #ff0000;
-    margin-right: 15px;
-    font-weight: bold; /* Texto en negrita */
-    margin-right: 25px; /* Espacio entre el texto "Estado" y el botón */
-}
-
-.btn.availability {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dc3545; /* Color de fondo cuando no está disponible */
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    width: 200px; /* Ancho del botón */
-    text-align: center; /* Centra el contenido del botón */
-}
-
-.btn.availability.available {
-    background-color: #28a745; /* Color de fondo cuando está disponible */
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.btn.availability i {
-    margin-right: 8px;
-}
-
-.btn.availability:hover {
-    background-color: #c82333; /* Color de fondo al pasar el mouse */
-}
-
-.availability-label {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 30px;
-    font-family: 'Ubuntu', sans-serif;
-    animation: fadeIn 2s ease-in-out;
-}
-
-
-/* Estilos responsivos */
-@media (max-width: 916px) {
-    .navbar-toggle {
-        display: flex;
-    }
-
-    .navbar-menu {
-        display: none;
-    }
-
-    .navbar-menu.active {
-        display: block;
-    }
-
-    .availability {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .availability span {
-        font-size: 18px;
-        color: #fff;
-        margin-right: 10px;
-    }
-    
-    .btn.available {
-        background-color: #28a745;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        display: none;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav ul li a {
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .main h2 {
-        font-size: 24px;
-    }
-
-    .functions {
-        flex-direction: column;
-    }
-
-    .function {
-        width: 90%;
-        margin: 0 auto 20px;
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.functions {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.function {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 320px;
-    width: 100%;
-    text-align: left;
-}
-
-.function h3 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-.function p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-#motivo {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.btn i {
-    margin-right: 10px;
-}
-
-.btn:hover {
-    background-color: #ff9800;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-    width: 100%;
-}
 
 /* Estilos responsivos */
 @media (max-width: 916px) {

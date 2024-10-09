@@ -37,7 +37,7 @@
             $nombre = $query->fetch_array();
 
             ?>
-            <h2>Bienvenido, <?php echo $nombre['nombre']; ?></h2>
+            <h2>Hola <?php echo $nombre['nombre']; ?>, bienvenido</h2>
             <!-- <div class="availability">
                 <span class="availability-label">Estado:</span>
                 <button id="availability-btn" class="btn availability"><i class="fas fa-circle"></i> <span id="availability-text">No Disponible</span></button>
