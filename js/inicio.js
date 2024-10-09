@@ -61,10 +61,15 @@ function hacerLlamado() {
 
 // Función para agregar notificaciones
 function agregarNotificacion(mensaje) {
-    notificaciones.push(mensaje);
-    localStorage.setItem('notificaciones', JSON.stringify(notificaciones));
-    guardarNotificacionEnDB(mensaje); // Guardar en la base de datos
-    mostrarNotificaciones(); // Actualizar la vista de notificaciones
+    // Verificar si la notificación ya existe antes de agregarla
+    const notificacionExistente = notificaciones.find(notificacion => notificacion === mensaje);
+
+    if (!notificacionExistente) {
+        notificaciones.push(mensaje);
+        localStorage.setItem('notificaciones', JSON.stringify(notificaciones));
+        guardarNotificacionEnDB(mensaje); // Guardar en la base de datos
+        mostrarNotificaciones(); // Actualizar la vista de notificaciones
+    }
 }
 
 // Función para mostrar las notificaciones en la interfaz
@@ -75,6 +80,7 @@ function mostrarNotificaciones() {
     if (notificaciones.length === 0) {
         notificacionDiv.innerHTML = '<p>No hay notificaciones.</p>';
     } else {
+        // Mostrar todas las notificaciones sin duplicarlas (se evitó en agregarNotificacion)
         notificaciones.forEach(mensaje => {
             const notificationElement = document.createElement('div');
             notificationElement.className = 'notification';
@@ -184,18 +190,3 @@ function borrarNotificaciones() {
 
     console.log("Todas las notificaciones se han borrado.");
 }
-document.addEventListener('DOMContentLoaded', function () {
-    const contenedorNotificaciones = document.getElementById('contenedor-notificaciones');
-    const notificacionesGuardadas = JSON.parse(localStorage.getItem('notificaciones')) || [];
-    
-    if (notificacionesGuardadas.length === 0) {
-        contenedorNotificaciones.innerHTML = '<p>No hay notificaciones.</p>';
-    } else {
-        notificacionesGuardadas.forEach(mensaje => {
-            const notificationElement = document.createElement('div');
-            notificationElement.className = 'notification';
-            notificationElement.innerText = mensaje;
-            contenedorNotificaciones.appendChild(notificationElement);
-        });
-    }
-});

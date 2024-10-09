@@ -67,7 +67,11 @@ $result = mysqli_query($conexion, $query);
             <?php endif; ?>
         </div>
     </section>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CallNex. Todos los derechos reservados.</p>
+        </div>
+    </footer>
     <script src="../js/inicio.js"></script>
     <script>
         document.querySelector('.navbar-toggle').addEventListener('click', function() {

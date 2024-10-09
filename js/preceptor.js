@@ -3,8 +3,11 @@ let llamados = JSON.parse(localStorage.getItem('llamados')) || [];
 function aceptarLlamado(id) {
     const llamado = llamados.find(ll => ll.id === id);
     if (llamado) {
+        // Verificar si el mensaje fue seleccionado desde el desplegable
+        const mensajeSeleccionado = llamado.mensaje || 'En seguida voy'; // Valor por defecto si no se seleccionó
+
         llamado.estado = 'en camino'; // Cambiar el estado a 'en camino'
-        llamado.mensaje = 'En seguida voy';
+        llamado.mensaje = mensajeSeleccionado;
         actualizarLlamados();
         guardarLlamados();
 
@@ -18,8 +21,11 @@ function aceptarLlamado(id) {
 function rechazarLlamado(id) {
     const llamado = llamados.find(ll => ll.id === id);
     if (llamado) {
+        // Verificar si el mensaje fue seleccionado desde el desplegable
+        const mensajeSeleccionado = llamado.mensaje || 'No puedo'; // Valor por defecto si no se seleccionó
+
         llamado.estado = 'rechazado';
-        llamado.mensaje = 'No puedo';
+        llamado.mensaje = mensajeSeleccionado;
         actualizarLlamados();
         guardarLlamados();
 
@@ -30,6 +36,14 @@ function rechazarLlamado(id) {
     }
 }
 
+function cambiarMensaje(id, mensaje) {
+    const llamado = llamados.find(ll => ll.id === id);
+    if (llamado) {
+        llamado.mensaje = mensaje; // Actualizar el mensaje con el seleccionado
+        guardarLlamados();
+        actualizarLlamados(); // Actualizar la UI para reflejar el mensaje seleccionado
+    }
+}
 
 function llegadaPreceptor(id) {
     const llamado = llamados.find(ll => ll.id === id);
