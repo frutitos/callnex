@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración - CallNex</title>
-    <link rel="icon" href="/callnex/imgs/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/callnex/css/config.css">
-    <link rel="stylesheet" href="/callnex/css/inicio.css">
-    <!-- Iconos -->
+    <title>Ayuda - Usuario Normal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/callnex/css/inicio.css">
+    <link rel="stylesheet" href="/callnex/css/ayuda.css">
 </head>
 <body>
     <header>
@@ -22,35 +20,31 @@
                     <li><a href="inicio.php"><i class="fas fa-home"></i><span class="nav-text">Inicio</span></a></li>
                     <li><a href="noti.php"><i class="fas fa-bell"></i><span class="nav-text">Notificaciones</span></a></li>
                     <li><a href="config.php"><i class="fas fa-gear"></i><span class="nav-text">Configuración</span></a></li>
-                    <li><a href="ayuda.php"><i class="fas fa-question-circle"></i><span class="nav-text">Ayuda</span></a></li> <!-- Nueva opción de Ayuda -->
+                    <li><a href="ayuda.php"><i class="fas fa-question-circle"></i><span class="nav-text">Ayuda</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="main">
-        <div class="container">
-            <h2>Configuración</h2>
-            <div class="config-options">
-                <div class="option">
-                    <a href="perfil.php"><i class="fas fa-user"></i> <span class="option-text">Perfil</span></a>
-                </div>
-                <!-- <div class="option">
-                    <a href="ayuda.html"><i class="fas fa-question"></i> <span class="option-text">Ayuda</span></a>
-                </div> -->
-                <div class="option">
-                    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> <span class="option-text">Cerrar sesión</span></a>
-                </div>
-            </div>
+    <div class="download-section">
+            <h3>Descargar Manual de usuario para profesor</h3>
+            <p>Descarga el PDF con toda la información de ayuda aquí:</p>
+            <a href="/callnex/pdf/" class="download-btn">Descargar PDF</a>
         </div>
-    </section>
 
-    <footer>
+        <section>
+            <h3>Creado por:</h3>
+            <p>Axel Albarenque </p>
+            <p>Santiago Frutos </p> 
+            <p>Nazareno Salas</p>
+        </section>
+
+        <footer>
         <div class="container">
             <p>&copy; 2024 CallNex. Todos los derechos reservados.</p>
         </div>
     </footer>
-
+    <script src="../js/inicio.js"></script>
     <script>
         document.querySelector('.navbar-toggle').addEventListener('click', function() {
             document.querySelector('.navbar-menu ul').classList.toggle('active');

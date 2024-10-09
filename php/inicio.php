@@ -10,21 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container menu">
-            <div class="logo">
-                <img src="/callnex/imgs/icono_callnex.png" alt="Logo de CallNex">
-            </div>
-            <button class="navbar-toggle"><i class="fas fa-bars"></i></button>
-            <nav class="navbar-menu">
-                <ul>
-                    <li><a href="inicio.php"><i class="fas fa-home"></i><span class="nav-text">Inicio</span></a></li>
-                    <li><a href="noti.php"><i class="fas fa-bell"></i><span class="nav-text">Notificaciones</span></a></li>
-                    <li><a href="config.php"><i class="fas fa-gear"></i><span class="nav-text">Configuración</span></a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="container menu">
+        <div class="logo">
+            <img src="/callnex/imgs/icono_callnex.png" alt="Logo de CallNex">
         </div>
-    </header>
+        <button class="navbar-toggle"><i class="fas fa-bars"></i></button>
+        <nav class="navbar-menu">
+            <ul>
+                <li><a href="inicio.php"><i class="fas fa-home"></i><span class="nav-text">Inicio</span></a></li>
+                <li><a href="noti.php"><i class="fas fa-bell"></i><span class="nav-text">Notificaciones</span></a></li>
+                <li><a href="config.php"><i class="fas fa-gear"></i><span class="nav-text">Configuración</span></a></li>
+                <li><a href="ayuda.php"><i class="fas fa-question-circle"></i><span class="nav-text">Ayuda</span></a></li> <!-- Nueva opción de Ayuda -->
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="main">
         <div class="container">

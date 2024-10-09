@@ -257,11 +257,25 @@ footer {
     }
 
     nav ul li a {
-        width: 100%;
-        text-align: center;
-        padding: 15px;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        padding: 10px 15px; /* Puedes ajustar este valor si es necesario */
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
     }
-
+    
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    /* Espaciado adicional para el ícono de ayuda si es necesario */
+    nav ul li:last-child a {
+        margin-right: 0; /* Asegura que el último elemento no tenga margen adicional */
+    }
     .main h2 {
         font-size: 24px;
     }
