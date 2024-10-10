@@ -17,34 +17,61 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: inline-block;
+    }
+}
+
+.navbar-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    font-size: 36px;
-    text-align: center;
+h1, h2 {
     color: #333;
-    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 20px;
 }
 
 h2 {
-    font-size: 28px;
-    color: #444;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: transform 0.3s;
+}
+
+form:hover {
+    transform: translateY(-5px);
 }
 
 label {
@@ -53,7 +80,6 @@ label {
     color: #333;
     margin-bottom: 5px;
     font-weight: bold;
-    text-align: left;
 }
 
 input[type="text"],
@@ -61,7 +87,7 @@ input[type="email"],
 input[type="password"],
 select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-bottom: 15px;
@@ -72,12 +98,11 @@ select {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-select:hover {
+input:focus,
+select:focus {
     border-color: rgb(24, 119, 207);
     outline: none;
+    box-shadow: 0 0 10px rgba(24, 119, 207, 0.5);
 }
 
 button[type="submit"],
@@ -86,7 +111,7 @@ button[type="button"] {
     background-color: #333;
     color: #fff;
     padding: 12px 25px;
-    text-decoration: none;
+    border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -101,54 +126,18 @@ button[type="button"]:hover {
 }
 
 #select-usuarios {
-    width: 100%;
+    background-color: #fff;
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: transform 0.3s;
 }
 
 #select-usuarios:hover {
     border-color: rgb(24, 119, 207);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: auto;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    select {
-        font-size: 12px;
-    }
-
-    button[type="submit"],
-    button[type="button"] {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
 }

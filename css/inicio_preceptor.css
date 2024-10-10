@@ -218,6 +218,115 @@ footer {
     height: auto;
 }
 
+/* Mejoras en el estilo del contenedor de detalles del llamado */
+#callModal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+#callModal .modal-content h3 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3F51B5;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#callModal .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#callModal .modal-content ul li {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+#callModal .modal-content ul li:hover {
+    background-color: #e3f2fd;
+    border-color: #64B5F6;
+    cursor: pointer;
+}
+
+#callModal .modal-content button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Label para los select */
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Select de curso y división */
+select {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#callModal .modal-content button:hover {
+    background-color: rgb(24, 119, 207);
+}
+
+#callModal .modal-content button:last-child {
+    background-color: #ff0000;
+}
+
+#callModal .modal-content button:last-child:hover {
+    background-color: #333;
+}
+
+/* Añadir una animación sutil al mostrar el contenedor */
+#callModal .modal-content {
+    animation: slideUp 0.5s ease forwards;
+    transform: translateY(20px);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Estilos responsivos */
 @media (max-width: 916px) {
     .navbar-toggle {

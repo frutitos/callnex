@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/callnex/css/inicio.css">
     <title>Administración de Usuarios</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -99,13 +100,27 @@
     </script>
 </head>
 <body>
+<header>
+    <div class="container menu">
+        <div class="logo">
+            <img src="/callnex/imgs/icono_callnex_vacio.png" alt="Logo de CallNex">
+        </div>
+        <button class="navbar-toggle"><i class="fas fa-bars"></i></button>
+        <nav class="navbar-menu">
+            <ul>
+                <li><a href="/callnex/php/inicio.php"><i class="fas fa-home"></i><span class="nav-text">Inicio profesor</span></a></li>
+                <li><a href="/callnex/php/inicio_preceptor.php"><i class="fas fa-home"></i><span class="nav-text">Inicio preceptor</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
     <h1>Administrar Usuarios</h1>
 
     <h2>Seleccionar Usuario para Modificar</h2>
     <select id="select-usuarios">
         <option value="">Seleccione un usuario</option>
     </select>
-
+<br>
     <h2>Modificar Usuario</h2>
     <form id="edit-form">
         <input type="hidden" id="edit-id" name="id">
@@ -131,7 +146,7 @@
         <button type="submit">Guardar Cambios</button>
         <button type="button" id="delete-user-btn">Eliminar Usuario</button>
     </form>
-
+<br>
     <h2>Crear Nuevo Usuario</h2>
     <form id="create-form">
         <label for="create-nombre">Nombre:</label>
