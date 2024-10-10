@@ -29,8 +29,8 @@
     <div class="download-section">
             <h3>Descargar Manual de usuario para profesor</h3>
             <p>Descarga el PDF con toda la información de ayuda aquí:</p>
-            <a href="/callnex/pdf/" class="download-btn">Descargar PDF</a>
-        </div>
+            <a href="/callnex/php/pdf/Manual.pdf" class="download-btn" download="Manual.pdf">Descargar PDF</a>
+    </div>
 
         <section>
             <h3>Creado por:</h3>
