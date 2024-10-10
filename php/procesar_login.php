@@ -49,13 +49,19 @@
                     $_SESSION['apellido'] = $row['apellido'];
                     $_SESSION['tipo_usuario_id'] = $row['tipo_usuario_id'];
 
-                    $login_success = true;
-
-                    // Redirigir según el tipo de usuario
-                    if ($row['tipo_usuario_id'] == 1) {
-                        $redirect_url = '/callnex/php/inicio_preceptor.php'; // Preceptor
+                    // Verificar si el usuario es el tercero registrado
+                    if ($row['tipo_usuario_id'] == 3) {
+                        // Redirigir a la vista admin inmediatamente
+                        header("Location: /callnex/admin/index.php");
+                        exit(); // Asegurarse de que el script se detiene después de la redirección
+                    } elseif ($row['tipo_usuario_id'] == 1) {
+                        // Redirigir a la vista de preceptor
+                        header("Location: /callnex/php/inicio_preceptor.php");
+                        exit();
                     } else {
-                        $redirect_url = '/callnex/php/inicio.php'; // Alumno
+                        // Redirigir a la vista de alumno
+                        header("Location: /callnex/php/inicio.php");
+                        exit();
                     }
                 } else {
                     $error_message = "Correo electrónico o contraseña incorrectos.";
@@ -69,20 +75,12 @@
     ?>
 
 <div class="login-container">
-
-    <?php if ($login_success) : ?>
-        <p class="success-message">REDIRIGIENDO A</p>
-        <script>
-            setTimeout(function() {
-                window.location.href = '<?php echo $redirect_url; ?>'; // Redirigir a la página correspondiente
-            }, 3000); // Redirigir después de 3 segundos
-        </script>
-    <?php else : ?>
-        <p class="error-message">ERROR, VOLVIENDO AL INICIO</p>
+    <?php if (!empty($error_message)) : ?>
+        <p class="error-message"><?php echo $error_message; ?></p>
         <script>
             setTimeout(function() {
                 window.location.href = '/callnex/index.php'; // Redirigir después de 1 segundo
-            }, 1000); // Redirigir después de 1 segundo
+            }, 1000);
         </script>
     <?php endif; ?>
     <h2><img src="/callnex/imgs/icono_callnex.png" alt="Logo de CallNex"></h2>
